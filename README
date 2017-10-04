@@ -5,3 +5,5 @@ There is another existing python wrapper to the Geonames API, but it is old and 
 This wrapper uses simplejson to simply convert the Geonames data into python objects.
 
 Any suggestions, criticisms or contributions are most welcome!
+
+Forked to convert from Python2 to Python3
