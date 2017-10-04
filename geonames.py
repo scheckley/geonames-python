@@ -1,13 +1,13 @@
 import sys
-import urllib
-import urllib2
+import urllib.request, urllib.parse, urllib.error
+import urllib.request, urllib.error, urllib.parse
 import simplejson as json
 DOMAIN = 'http://api.geonames.org/'
-USERNAME = '' #enter your geonames username here
+USERNAME = 'scheckley' #enter your geonames username here
 
 def fetchJson(method, params):
-    uri = DOMAIN + '%s?%s&username=%s' % (method, urllib.urlencode(params), USERNAME)
-    resource = urllib2.urlopen(uri).readlines()
+    uri = DOMAIN + '%s?%s&username=%s' % (method, urllib.parse.urlencode(params), USERNAME)
+    resource = urllib.request.urlopen(uri).readlines()
     js = json.loads(resource[0])
     return js
 
